@@ -21,9 +21,9 @@ read DB_USER_NAME
 echo "Enter DB password: "
 read DB_PASSWORD
 
-sudo -u postgres psql -d postgres -c "CREATE DATABASE IF NOT EXISTS $PROD_DB_NAME"
-sudo -u postgres psql -d postgres -c "CREATE DATABASE IF NOT EXISTS $DEV_DB_NAME" 
-sudo -u postgres psql -d postgres -c "CREATE ROLE IF NOT EXISTS $DB_USER_NAME LOGIN" 
+sudo -u postgres psql -d postgres -c "CREATE DATABASE $PROD_DB_NAME"
+sudo -u postgres psql -d postgres -c "CREATE DATABASE $DEV_DB_NAME" 
+sudo -u postgres psql -d postgres -c "CREATE ROLE $DB_USER_NAME LOGIN" 
 sudo -u postgres psql -d postgres -c "ALTER ROLE $DB_USER_NAME WITH PASSWORD '$DB_PASSWORD'"
 sudo -u postgres psql -d postgres -c "GRANT ALL PRIVILEGES ON DATABASE $PROD_DB_NAME to $DB_USER_NAME"
 sudo -u postgres psql -d postgres -c "GRANT ALL PRIVILEGES ON DATABASE $DEV_DB_NAME to $DB_USER_NAME"
