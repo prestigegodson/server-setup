@@ -28,4 +28,12 @@ sudo sed -e "s/server_port/$DEV_SERVER_PORT/g" -e "s/example.com/staging.$DOMAIN
 sudo ln -s "/etc/nginx/sites-available/$DOMAIN_NAME" /etc/nginx/sites-enabled/
 sudo ln -s "/etc/nginx/sites-available/staging.$DOMAIN_NAME" /etc/nginx/sites-enabled/
 
-sudo rm /etc/nginx/sites-enabled/default
+if [ -f "/etc/nginx/sites-enabled/default" ]
+then
+    sudo rm /etc/nginx/sites-enabled/default
+fi
+
+# Next, test to make sure that there are no syntax errors in any of your Nginx files:
+sudo nginx -t
+
+sudo systemctl restart nginx
