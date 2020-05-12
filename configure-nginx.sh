@@ -25,8 +25,15 @@ sudo cp index.html "/var/www/staging.$DOMAIN_NAME/html/index.html"
 sudo sed -e "s/server_port/$PROD_SERVER_PORT/g" -e "s/example.com/$DOMAIN_NAME/g" -e "s|base_url|$BASE_URL|g" nginx.conf > "/etc/nginx/sites-available/$DOMAIN_NAME"
 sudo sed -e "s/server_port/$DEV_SERVER_PORT/g" -e "s/example.com/staging.$DOMAIN_NAME/g" -e "s|base_url|$BASE_URL|g" nginx.conf > "/etc/nginx/sites-available/staging.$DOMAIN_NAME"
 
-sudo ln -s "/etc/nginx/sites-available/$DOMAIN_NAME" /etc/nginx/sites-enabled/
-sudo ln -s "/etc/nginx/sites-available/staging.$DOMAIN_NAME" /etc/nginx/sites-enabled/
+if [ ! -f "/etc/nginx/sites-enabled/$DOMAIN_NAME" ]
+then
+    sudo ln -s "/etc/nginx/sites-available/$DOMAIN_NAME" /etc/nginx/sites-enabled/
+fi
+
+if [ ! -f "/etc/nginx/sites-enabled/staging.$DOMAIN_NAME" ]
+then
+    sudo ln -s "/etc/nginx/sites-available/staging.$DOMAIN_NAME" /etc/nginx/sites-enabled/
+fi
 
 if [ -f "/etc/nginx/sites-enabled/default" ]
 then
