@@ -4,13 +4,13 @@ echo "****************************************"
 echo "  ENTER NGINX SERVER BLOCK CREDENTIALS  "
 echo "****************************************"
 echo ''
-echo 'Enter domain name: '
+echo 'Enter domain name. eg: example.com : '
 read DOMAIN_NAME
-echo 'Enter BASE URL: '
+echo 'Enter BASE URL. eg: /test/api/ :  '
 read BASE_URL
-echo 'Enter production server port: '
+echo 'Enter production server port e.g 8080: '
 read PROD_SERVER_PORT
-echo 'Enter dev server port: '
+echo 'Enter dev server port e.g 8081: '
 read DEV_SERVER_PORT
 
 sudo mkdir -p "/var/www/$DOMAIN_NAME/html"
