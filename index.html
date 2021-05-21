@@ -1,116 +1,673 @@
-<!DOCTYPE html>
-<html lang="en">
+<head>
+<title>Falling Soon</title>
 
-    <head>
+<!--META TAG-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta charset="UTF-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Mahesh">
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Coming Soon</title>
+<!--ICON-->
+<link rel="shortcut icon" href="images/logo.png">
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:400,700'>
-        <link rel="stylesheet" href="https://s3.us-east-2.amazonaws.com/artandcodes.com/coming-soon-template/alissa-coming-soon-v2-0/assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://s3.us-east-2.amazonaws.com/artandcodes.com/coming-soon-template/alissa-coming-soon-v2-0/assets/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://s3.us-east-2.amazonaws.com/artandcodes.com/coming-soon-template/alissa-coming-soon-v2-0/assets/css/style.css">
+<!--PLUGIN-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
 
-        <!-- Favicon and touch icons -->
-        <link rel="shortcut icon" href="assets/ico/favicon.ico">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://s3.us-east-2.amazonaws.com/artandcodes.com/coming-soon-template/alissa-coming-soon-v2-0/assets/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://s3.us-east-2.amazonaws.com/artandcodes.com/coming-soon-template/alissa-coming-soon-v2-0/assets/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://s3.us-east-2.amazonaws.com/artandcodes.com/coming-soon-template/alissa-coming-soon-v2-0/assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="https://s3.us-east-2.amazonaws.com/artandcodes.com/coming-soon-template/alissa-coming-soon-v2-0/assets/ico/apple-touch-icon-57-precomposed.png">
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
 
-    </head>
+/*DEFAULT*/
+.btn1{
+background:#3399ff;
+color:#fff;
+outline:none;
+border:0;
+padding:20px 40px;
+border-radius:3px;
+box-shadow:0px 6px 16px -6px rgba(1,1,1,0.5);
+transition:0.5s;
+display:block;
+margin:0px 10px;
+text-transform:uppercase;
+}
 
-    <body>
+.btn1:hover{
+background:#096d9f;
+}
 
-        <!-- Header -->
-        <div class="container">
-            <div class="row header">
-                <div class="col-sm-4 logo">
-                    <h1><a href="index.html">TEY'S CLUB</a> <span>.</span></h1>
-                </div>
-            </div>
-        </div>
 
-        <!-- Coming Soon -->
-        <div class="coming-soon">
-            <div class="inner-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <h2>We're updating our platform</h2>
-                            <p>We are working very hard on our site. It will bring a lot of new features. Stay tuned!</p>
-                            <div class="timer">
-                                <div class="days-wrapper">
-                                    <span class="days"></span> <br>days
-                                </div>
-                                <div class="hours-wrapper">
-                                    <span class="hours"></span> <br>hours
-                                </div>
-                                <div class="minutes-wrapper">
-                                    <span class="minutes"></span> <br>minutes
-                                </div>
-                                <div class="seconds-wrapper">
-                                    <span class="seconds"></span> <br>seconds
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Content -->
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 subscribe">
-                    <h3>Subscribe to our newsletter</h3>
-                    <p>Sign up now to our newsletter and you'll be one of the first to know when the site is ready:</p>                    
-                    <form class="form-inline" role="form" action="assets/subscribe.php" method="post">
-                    	<div class="form-group">
-                    		<label class="sr-only" for="subscribe-email">Email address</label>
-                        	<input type="text" name="email" placeholder="Enter your email..." class="subscribe-email form-control" id="subscribe-email">
-                        </div>
-                        <button type="submit" class="btn">Subscribe</button>
-                    </form>
-                    <div class="success-message"></div>
-                    <div class="error-message"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 social">
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="Dribbble"><i class="fa fa-dribbble"></i></a>
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a>
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a>
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="Flickr"><i class="fa fa-flickr"></i></a>
-                </div>
-            </div>
-        </div>
+.container{
+width:100%;
+height:100vh;
+margin:0;
+}
 
-        
-        <!-- Javascript -->
-        <script src="https://s3.us-east-2.amazonaws.com/artandcodes.com/coming-soon-template/alissa-coming-soon-v2-0/assets/js/jquery-1.11.1.min.js"></script>
-        <script src="https://s3.us-east-2.amazonaws.com/artandcodes.com/coming-soon-template/alissa-coming-soon-v2-0/assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="https://s3.us-east-2.amazonaws.com/artandcodes.com/coming-soon-template/alissa-coming-soon-v2-0/assets/js/jquery.backstretch.min.js"></script>
-        <script src="https://s3.us-east-2.amazonaws.com/artandcodes.com/coming-soon-template/alissa-coming-soon-v2-0/assets/js/jquery.countdown.min.js"></script>
-        <script src="https://s3.us-east-2.amazonaws.com/artandcodes.com/coming-soon-template/alissa-coming-soon-v2-0/assets/js/scripts.js"></script>
-        
-        <!--[if lt IE 10]>
-            <script src="assets/js/placeholder.js"></script>
-        <![endif]-->
+.container table{
+width:100%;
+height:100vh;
+border-collapse:collapse;
+}
 
-    </body>
+.container table td{
+width:50%;
+}
 
-</html>
+.container table td:nth-child(1){
+background:#3399ff;
+position:relative;
+}
+
+.container table td:nth-child(1) .logo{
+width:120px;
+height:80px;
+z-index:9;
+position:absolute;
+top:2em;
+left:1em;
+filter: brightness(0) invert(1);
+}
+
+.container table td:nth-child(1) section{
+position:absolute;
+top:20%;
+left:2%;
+color:#fff;
+width:70%;
+z-index:999;
+}
+
+.container table td:nth-child(1) section h5{
+line-height:2em;
+font-weight:normal;
+}
+
+.container table td:nth-child(1) section .btn1{
+background:#1e1e1e;
+}
+
+.container table td:nth-child(1) section .btn1:hover{
+background:#000;
+}
+
+.container table td:nth-child(1) section .footer{
+position:fixed;
+bottom:2em;
+z-index:9;
+left:2em;
+}
+
+.container table td:nth-child(1) section .footer a{
+text-decoration:none;
+color:#fff;
+font-size:2em;
+margin:0px 10px;
+transition:0.5s;
+}
+
+.container table td:nth-child(1) section .footer a:hover{
+color:#000;
+}
+
+.ml9 {
+  position: relative;
+  font-weight: bold;
+  font-size: 3em;
+  color:#fff;
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+.container table td:nth-child(2){
+background:#fff;
+padding:50px;
+min-width:400px;
+position:relative;
+}
+
+.container table td:nth-child(2) h1{
+font-size:1.7em;
+}
+
+.container table td:nth-child(2) p{
+color:rgba(1,1,1,0.7);
+}
+
+.container table td:nth-child(2) span{
+font-size:12px;
+color:gray;
+position:absolute;
+bottom:3em;
+}
+
+#particle-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width:600px){
+.container{
+min-height:100%;
+margin:0;
+}
+.container table{
+min-height:100%;
+}
+
+.container table td{
+width:100%;
+display:block;
+min-height:100vh;
+}
+.container table td:nth-child(2){
+padding:20px;
+width:90%;
+}
+.container table td:nth-child(1) section .footer{
+position:absolute;
+bottom:-1em;
+left:1em;
+}
+.ml9 {
+font-size: 2em;
+}
+.container table td:nth-child(1) section{
+width:80%;
+}
+}
+
+
+
+
+
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidenav table{
+width:100%;
+height:100vh;
+}
+
+.sidenav table td{
+width:50%;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  text-decoration:none;
+  color:#000;
+}
+
+#main {
+  transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+.contact{
+width:100%;
+background-image:linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)), url("../images/full_screen-logo.JPG");
+background-size:100% 100%;
+}
+.contact .title{
+display:block;
+font-size:2em;
+font-family: 'Coda Caption', sans-serif;
+}
+.contact .sub-title{
+color:#CCCCCC;
+font-size:12px;
+font-family: 'Coda Caption', sans-serif;
+}
+.contact form{
+width:60%;
+}
+.contact form input,.contact form textarea {
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  border-radius: 320px;
+  padding: 16px;
+  background-color: #EBECF0;
+  text-shadow: 1px 1px 0 #FFF;
+  margin-top:2%;
+}
+.contact form input,.contact form textarea {
+  margin-right: 8px;
+  box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+  resize:none;
+}
+.contact form input:focus {
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+
+.contact form button {
+    color: #0f1c48;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+        border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 320px;
+    padding: 16px;
+    background-color: #EBECF0;
+    text-shadow: 1px 1px 0 #FFF;
+    width:50%;
+    margin-top:2%;
+  
+}
+.contact form button:hover {
+  box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+}
+.contact form button:active {
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+
+
+@media (max-width:600px){
+.sidenav table{
+width:100%;
+min-height:100%;
+}
+
+.sidenav table td{
+width:100%;
+display:block;
+}
+.contact{
+padding-top:30px;
+}
+}
+
+
+.modal_popup{
+font-family: 'Josefin Sans', sans-serif;
+width:100%;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+position:fixed;
+top:0;
+z-index:9999;
+display:none;
+box-shadow:0px 6px 16px -6px rgba(1,1,1,0.5);
+background:rgba(1,1,1,0.5);
+text-align:center;
+}
+.modal_popup form{
+padding:30px;
+background-image:url("https://i.ibb.co/dcBg06k/vision.jpg");
+background-size:cover;
+width:60%;
+position:absolute;
+left:20%;
+top:20%;
+text-align:center;
+}
+.modal_popup #close{
+position:absolute;
+right:0;
+top:0;
+cursor:pointer;
+background:#1e1e1e;
+padding:0px 10px;
+color:#3399ff;
+font-size:2em;
+transition:0.2s;
+}
+.modal_popup #close:hover{
+color:#fff;
+}
+.modal_popup ul{
+width:60%;
+}
+.modal_popup #sub_title{
+font-size:0.7em;
+color:gray;
+position:static;
+background:transparent;
+padding:0px;
+cursor:default;
+}
+.modal_popup ul li{
+list-style:none;
+text-align:left;
+}
+.modal_popup ul li label,.modal_popup ul li input,.modal_popup ul li button{
+margin:10px 0px;
+display:block;
+}
+.modal_popup ul li input{
+padding:15px 10px;
+width:400px;
+outline:none;
+}
+.modal_popup ul li button{
+background:#3399ff;
+outline:none;
+border:0;
+border-radius:3px;
+box-shadow:0px 6px 16px -6px rgba(1,1,1,0.5);
+padding:10px 20px;
+color:#fff;
+transition:0.5s;
+}
+.modal_popup ul li button:hover{
+box-shadow:0px 1px 1px 0px rgba(1,1,1,0.5);
+}
+/* Add zooming Animation */
+.zooming {
+  -webkit-animation: animatezoom 0.5s;
+  animation: animatezoom 0.5s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+@media (max-width:400px){
+.btn{
+ position:absolute;
+ left:30vw;
+}
+.modal_popup form{
+position:fixed;
+padding:10px;
+left:1%;
+width:90%;
+margin:1%;
+}
+.modal_popup ul li label{
+font-size:13px; 
+}
+.modal_popup h2{
+font-size:1em;    
+}
+.modal_popup ul li input{
+width:100%;
+}
+.modal_popup ul{
+width:70%;
+position:relative;
+left:-30px;
+}
+.modal_popup #sub_title{
+font-size:10px;    
+}
+}
+@media (max-width:600px){
+.modal_popup form{
+position:fixed;
+padding:10px;
+left:1%;
+width:90%;
+margin:1%;
+}
+.modal_popup ul li input{
+width:100%;
+}
+.modal_popup ul{
+width:70%;
+}
+}
+
+@media (max-width:760px){
+.modal_popup form{
+position:fixed;
+padding:10px;
+left:1%;
+width:90%;
+margin:1%;
+}
+.modal_popup ul li input{
+width:100%;
+}
+}
+
+@media (max-width:900px){
+.modal_popup form{
+position:fixed;
+padding:10px;
+left:1%;
+width:90%;
+margin:1%;
+}
+.modal_popup ul li input{
+width:100%;
+}
+}
+@media (max-width:980px){
+.modal_popup form{
+position:fixed;
+padding:10px;
+left:1%;
+width:90%;
+margin:1%;
+}
+.modal_popup ul li input{
+width:100%;
+}
+.modal_popup ul{
+width:70%;
+position:relative;
+left:-30px;
+}
+}
+
+
+
+
+.credits{
+  position:fixed;
+  bottom:20px;
+  right:0px;
+  background:#1e1e1e;
+  padding:10px;
+  color:gray;
+  font-size:13px;
+  z-index:9999;
+}
+</style>
+</head>
+<body>
+<div class="container"  id="main">
+<table>
+<tr>
+<td id="particle-canvas">
+<section>
+<h1 class="ml9">
+  <span class="text-wrapper">
+    <span class="letters">Coming Soon...</span>
+  </span>
+</h1>
+<h5>We are currently working on our mobile application. </h5>
+<span class="footer">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-phone"></i></a>
+<a href="#"><i class="fa fa-envelope"></i></a>
+</span>
+</section>
+</td>
+<td>
+<p id="demo"></p>
+<h1>We are making an awesome mobile app for you.</h1>
+<p>
+That will enable transparent and improved interactions between landlords or estate managers and tenants
+</p>
+</td>
+</tr>
+</table>
+</div>
+
+
+<div id="mySidenav" class="sidenav">
+  <table>
+  <tr>
+<td>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<div style="width: 100%;height:100vh;"><iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Malet%20St,%20London%20WC1E%207HU,%20United%20Kingdom+(Your%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" style="height:100vh;" frameborder="0"></iframe></div>
+</td>
+<td class="contact">
+<center>
+<span class="title">Get In Touch</span>
+<span class="sub-title">We Would Love To Hear From You</span>
+<form action="contact.php" method="POST">
+<input type="text" name="name" placeholder="Full Name*" required>
+<input type="email" name="email" placeholder="Email Address*" required>
+<input type="tel" name="mobile" placeholder="Contact no*" required>
+<textarea name="message" placeholder="Your Message Here*" required></textarea>
+<button type="submit">Submit</button>
+</form>
+</center>
+</td>  
+  </tr>
+  </table>
+</div>
+
+
+
+<div class="modal_popup" id="modal_popup">
+<form action="" class=" zooming" method="post">
+<span id="close" onclick="close_newsletter_modal()">&times;</span>
+<h2>NEWS LETTER</h2>
+<p id="sub_title">Never miss any updates from us. Subscribe to our newsletter now.</p>
+<center>
+<ul>
+<li>
+<label for="subscribe_newsletter">Enter Your Email-Address</label>
+<input type="email" name="email" id="subscribe_newsletter" placeholder="eg:mail@domain.com" required/>
+</li>
+<li><button type="submit">Subscribe</button></li>
+</ul>
+</center>
+</form>
+</div>
+  
+<script>
+// particle.min.js hosted on GitHub
+// Scroll down for initialisation code
+
+!function(a){var b="object"==typeof self&&self.self===self&&self||"object"==typeof global&&global.global===global&&global;"function"==typeof define&&define.amd?define(["exports"],function(c){b.ParticleNetwork=a(b,c)}):"object"==typeof module&&module.exports?module.exports=a(b,{}):b.ParticleNetwork=a(b,{})}(function(a,b){var c=function(a){this.canvas=a.canvas,this.g=a.g,this.particleColor=a.options.particleColor,this.x=Math.random()*this.canvas.width,this.y=Math.random()*this.canvas.height,this.velocity={x:(Math.random()-.5)*a.options.velocity,y:(Math.random()-.5)*a.options.velocity}};return c.prototype.update=function(){(this.x>this.canvas.width+20||this.x<-20)&&(this.velocity.x=-this.velocity.x),(this.y>this.canvas.height+20||this.y<-20)&&(this.velocity.y=-this.velocity.y),this.x+=this.velocity.x,this.y+=this.velocity.y},c.prototype.h=function(){this.g.beginPath(),this.g.fillStyle=this.particleColor,this.g.globalAlpha=.7,this.g.arc(this.x,this.y,1.5,0,2*Math.PI),this.g.fill()},b=function(a,b){this.i=a,this.i.size={width:this.i.offsetWidth,height:this.i.offsetHeight},b=void 0!==b?b:{},this.options={particleColor:void 0!==b.particleColor?b.particleColor:"#fff",background:void 0!==b.background?b.background:"#1a252f",interactive:void 0!==b.interactive?b.interactive:!0,velocity:this.setVelocity(b.speed),density:this.j(b.density)},this.init()},b.prototype.init=function(){if(this.k=document.createElement("div"),this.i.appendChild(this.k),this.l(this.k,{position:"absolute",top:0,left:0,bottom:0,right:0,"z-index":1}),/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(this.options.background))this.l(this.k,{background:this.options.background});else{if(!/\.(gif|jpg|jpeg|tiff|png)$/i.test(this.options.background))return console.error("Please specify a valid background image or hexadecimal color"),!1;this.l(this.k,{background:'url("'+this.options.background+'") no-repeat center',"background-size":"cover"})}if(!/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(this.options.particleColor))return console.error("Please specify a valid particleColor hexadecimal color"),!1;this.canvas=document.createElement("canvas"),this.i.appendChild(this.canvas),this.g=this.canvas.getContext("2d"),this.canvas.width=this.i.size.width,this.canvas.height=this.i.size.height,this.l(this.i,{position:"relative"}),this.l(this.canvas,{"z-index":"20",position:"relative"}),window.addEventListener("resize",function(){return this.i.offsetWidth===this.i.size.width&&this.i.offsetHeight===this.i.size.height?!1:(this.canvas.width=this.i.size.width=this.i.offsetWidth,this.canvas.height=this.i.size.height=this.i.offsetHeight,clearTimeout(this.m),void(this.m=setTimeout(function(){this.o=[];for(var a=0;a<this.canvas.width*this.canvas.height/this.options.density;a++)this.o.push(new c(this));this.options.interactive&&this.o.push(this.p),requestAnimationFrame(this.update.bind(this))}.bind(this),500)))}.bind(this)),this.o=[];for(var a=0;a<this.canvas.width*this.canvas.height/this.options.density;a++)this.o.push(new c(this));this.options.interactive&&(this.p=new c(this),this.p.velocity={x:0,y:0},this.o.push(this.p),this.canvas.addEventListener("mousemove",function(a){this.p.x=a.clientX-this.canvas.offsetLeft,this.p.y=a.clientY-this.canvas.offsetTop}.bind(this)),this.canvas.addEventListener("mouseup",function(a){this.p.velocity={x:(Math.random()-.5)*this.options.velocity,y:(Math.random()-.5)*this.options.velocity},this.p=new c(this),this.p.velocity={x:0,y:0},this.o.push(this.p)}.bind(this))),requestAnimationFrame(this.update.bind(this))},b.prototype.update=function(){this.g.clearRect(0,0,this.canvas.width,this.canvas.height),this.g.globalAlpha=1;for(var a=0;a<this.o.length;a++){this.o[a].update(),this.o[a].h();for(var b=this.o.length-1;b>a;b--){var c=Math.sqrt(Math.pow(this.o[a].x-this.o[b].x,2)+Math.pow(this.o[a].y-this.o[b].y,2));c>120||(this.g.beginPath(),this.g.strokeStyle=this.options.particleColor,this.g.globalAlpha=(120-c)/120,this.g.lineWidth=.7,this.g.moveTo(this.o[a].x,this.o[a].y),this.g.lineTo(this.o[b].x,this.o[b].y),this.g.stroke())}}0!==this.options.velocity&&requestAnimationFrame(this.update.bind(this))},b.prototype.setVelocity=function(a){return"fast"===a?1:"slow"===a?.33:"none"===a?0:.66},b.prototype.j=function(a){return"high"===a?5e3:"low"===a?2e4:isNaN(parseInt(a,10))?1e4:a},b.prototype.l=function(a,b){for(var c in b)a.style[c]=b[c]},b});
+
+// Initialisation
+
+var canvasDiv = document.getElementById('particle-canvas');
+var options = {
+  particleColor: '#fff',
+  background: '../images/full_screen-logo.JPG',
+  interactive: true,
+  speed: 'medium',
+  density: 'high'
+};
+var particleCanvas = new ParticleNetwork(canvasDiv, options);
+
+
+
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml9 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml9 .letter',
+    scale: [0, 1],
+    duration: 1500,
+    elasticity: 600,
+    delay: (el, i) => 45 * (i+1)
+  }).add({
+    targets: '.ml9',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+  
+  
+  
+  
+  
+  
+  function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+
+
+function open_newsletter_modal(){
+document.getElementById("modal_popup").style.display="block";
+}
+function close_newsletter_modal(){
+document.getElementById("modal_popup").style.display="none";
+}
+
+</script>
+
+
+
